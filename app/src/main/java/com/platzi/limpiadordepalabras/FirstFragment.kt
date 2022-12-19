@@ -3,12 +3,10 @@ package com.platzi.limpiadordepalabras
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import com.platzi.limpiadordepalabras.databinding.FragmentFirstBinding
 
 /**
@@ -36,30 +34,24 @@ class FirstFragment : Fragment() {
 
         binding.LimpiarTextoBtn.setOnClickListener(){
             val textoALimpiar = binding.TextoALimpiar.text.toString()
-            val parts = textoALimpiar.split("@", " ");
-            val textoLimpio = parts[1];
-            binding.TextoLimpio.setText(textoLimpio);
+            val parts = textoALimpiar.split("@", " ")
+            val textoLimpio = parts[1]
+            binding.TextoLimpio.setText(textoLimpio)
         }
 
         binding.TwitterBtn.setOnClickListener(){
-            val user = binding.TextoLimpio.text.toString()
-            val uri = Uri.parse("https://twitter.com/$user")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+            val website = "https://twitter.com/"
+            linkTo(website)
         }
 
         binding.IGBtn.setOnClickListener(){
-            val user = binding.TextoLimpio.text.toString()
-            val uri = Uri.parse("https://instagram.com/$user")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+            val website = "https://instagram.com/"
+            linkTo(website)
         }
 
         binding.LinkTreeBtn.setOnClickListener(){
-            val user = binding.TextoLimpio.text.toString()
-            val uri = Uri.parse("https://linktr.ee/$user")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            startActivity(intent)
+            val website = "https://linktr.ee/"
+            linkTo(website)
         }
 
     }
@@ -67,6 +59,13 @@ class FirstFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun linkTo(website: String){
+        val user = binding.TextoLimpio.text.toString()
+        val uri = Uri.parse(website + user)
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
     }
 
 
