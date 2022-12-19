@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/IGBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="IG"
+        app:layout_constraintStart_toEndOf="@+id/TwitterBtn"
+        app:layout_constraintTop_toBottomOf="@+id/TextoLimpio" />
+
+    <EditText
+        android:id="@+id/TextoALimpiar"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Texto a limpiar"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/LimpiarTextoBtn"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Limpiar texto"
+        app:layout_constraintBottom_toTopOf="@+id/TextoLimpio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoALimpiar"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <EditText
+        android:id="@+id/TextoLimpio"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="500dp"
+        android:ems="10"
+        android:hint="Texto limpio"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/TextoALimpiar"
+        app:layout_constraintStart_toStartOf="@id/TextoALimpiar"
+        app:layout_constraintTop_toBottomOf="@id/LimpiarTextoBtn" />
+
+    <Button
+        android:id="@+id/TwitterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Twitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoLimpio" />
+
+    <Button
+        android:id="@+id/LinkTreeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Link tree"
+        app:layout_constraintStart_toEndOf="@+id/IGBtn"
+        app:layout_constraintTop_toBottomOf="@+id/TextoLimpio" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
