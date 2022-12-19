@@ -8,8 +8,8 @@
     <string name="previous">Previous</string>
 
     <string name="Twitter">Twitter</string>
-    <string name="IG">Instagram</string>
-    <string name="LT">Link tree</string>
+    <string name="Instagram">IG</string>
+    <string name="Link_tree">Link tree</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
